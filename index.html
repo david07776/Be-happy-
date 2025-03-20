@@ -38,7 +38,7 @@
     </div>
 
     <audio id="audio" controls>
-        <source src="music.mp3" type="audio/mpeg">
+        <source src="./music.mp3" type="audio/mpeg">
 
 
     <script>
@@ -62,10 +62,15 @@
             return this;
         };
         document.getElementById("code").typewriter();
+          document.addEventListener("DOMContentLoaded", function () {
+    var audio = document.getElementById("audio");
+    audio.play().catch(error => console.log("Autoplay blocked:", error));
+});
     </script>
   
     <script type="text/javascript" src="count.js"></script>
     <script type="text/javascript" async="" src="su.js"></script>
+   
 
 </body>
 </html>
